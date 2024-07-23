@@ -1,1 +1,132 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.all{
+    display: flex;
+    width: 100vw;
+    flex-wrap: wrap;
+}
+.item{
+    width: 230px;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px 0px gray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.item img{
+    width:100%;
+    height: 240px;
+}
+.item p{
+    text-align: center;
+}
+.item button,.side-total button{
+    background-color:blue;
+    padding: 5px;
+    margin: 4px;
+    border-radius: 2px;
+    border: none;
+    color:white;
+}
+.item button:hover,.side-total button:hover{
+    background-color: rgb(27, 27, 130);
+}
+.cart-total{
+    display: flex;
+    gap:4px;
+}
+#cart{
+    padding: 5px;
+    margin: 4px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px gray;
+    width: 65%;
+}
+#cart hr{
+    margin-bottom: 5px;
+}
+.cart{
+width: 100%;
+height: 190px;
+display: flex;
+gap:30px;
+margin-bottom: 10px;
+}
+.cart .details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+.cart>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cart .btn{
+display: flex;
+align-items: center;
+font-size: 20px;
+gap:25px;
+}
+.cart .btn div{
+    display: flex;
+    align-items: center;
+}
+.cart img{
+    width: 150px;
+    height: 190px;
+}
+.cart svg{
+    width: 20px;
+    height: 20px;
+}
+.cart .last-btn{
+    display: flex;
+}
+.cart .p-lastbtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart .last-btn span{
+    padding: 2px 20px;
+    background-color: rgb(221, 215, 215);
+}
+.cart .last-btn button{
+    padding: 2px;
+    border: none;
+    border-radius: 0px;
+    width: 15px;
+}
+.side-total{
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px gray;
+}
 
+.side-total .coupon{
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 5px 0px gray;
+    border-radius: 5px;
+    margin: 4px;
+    padding: 4px;
+}
+.side-total .coupon:hover{
+ color: rgb(66, 65, 65);
+ cursor: pointer;
+}
+.side-total svg{
+    width: 20px;
+    height: 20px;
+}
+.side-total .itemprice{
+    text-align: justify;
+}
