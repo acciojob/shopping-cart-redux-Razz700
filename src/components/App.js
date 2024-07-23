@@ -89,8 +89,8 @@ const [coupon,setcoupon]=useState(false);
         <h2 className="text-center">Shopping Cart</h2>
       </div>
       <div id="all-products">
-      <h2>All Products</h2>
-      <div className="all custom-card" >
+      <h3>All Products</h3>
+      <div className="all custom-card card" >
       {all.length>0 && all.map((item,i)=>{
        return <div className="item card" key={'a'+i}>
           <img src={item.images[0]} />
@@ -102,10 +102,10 @@ const [coupon,setcoupon]=useState(false);
       </div>
       </div>
       <div id="wishlists">
-      <h2>Wishlists</h2>
-      <div className="all custom-card">
+      <h3>Wishlists</h3>
+      <div className="all">
       {wishlist.length>0 && wishlist.map((item,i)=>{
-       return <div className="item card card-body" key={'w'+i}>
+       return <div className="item custom-card card card-body" key={'w'+i}>
           <img src={item.images[0]} />
           <p>${item.price}</p>
           <p>{item.title}</p>
@@ -116,12 +116,12 @@ const [coupon,setcoupon]=useState(false);
       </div>
 
       <div className="cart-total">
-      <div className="custom-card" id="cart">
-      <h4>Cart ({cart.length} items)</h4>
+      <div id="cart">
+      <h3>Cart ({cart.length} items)</h3>
       <hr/>
       {cart.length>0 && cart.map((item,i)=>{
         console.log(cart,'this');
-        return<div  className="cart card" key={'cart'+i}>
+        return<div  className="cart custom-card card" key={'cart'+i}>
         <img src={item.images[0]} />
         <div>
           <div className="p-lastbtn card-body">
