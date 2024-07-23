@@ -85,13 +85,13 @@ count[i]!=1? setcount(count=>{
 }
 const [coupon,setcoupon]=useState(false);
   return (
-    <div>
+    <div id="root">
        <div className="navbar-expand-lg">
-        <h3></h3>
         <h2 className="text-center">Shopping Cart</h2>
         </div>
       <div className="all custom-card card" >
-      <h3>All Products</h3>
+        <div> <h3>All Products</h3></div>
+     
       {all.length>0 && all.map((item,i)=>{
        return <div className="item card" key={'a'+i}>
           <img src={item.images[0]} />
