@@ -95,10 +95,11 @@ const [coupon,setcoupon]=useState(false);
       {all.length>0 && all.map((item,i)=>{
        return <div className="item card custom-card" key={'a'+i}>
           <img src={item.images[0]} />
-          <p>${item.price}</p>
-          <p>{item.title}</p>
-         <h4><button className="btn-primary" onClick={()=>handleaddtocart(item)}>Add to Cart</button></h4>
+          <div className="card-body"> <p>${item.price}</p>
+          <h4>{item.title}</h4>
+          <button className="btn-primary" onClick={()=>handleaddtocart(item)}>Add to Cart</button>
        </div>
+         </div>
       })}
       </div>
       <div><h3>Wishlists</h3></div>
@@ -122,7 +123,7 @@ const [coupon,setcoupon]=useState(false);
 
       <div className="cart-total">
       <div id="cart" className="col-lg-8">
-      <h3>Cart ({cart.length} items)</h3>
+      <h4>Cart ( {cart.length} items)</h4>
       <hr/>
       {cart.length>0 && cart.map((item,i)=>{
         console.log(cart,'this');
