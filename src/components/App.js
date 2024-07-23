@@ -108,7 +108,7 @@ const [coupon,setcoupon]=useState(false);
 
 
       <div id="wishlists">
-        <div><h3>Wishlists</h3></div>
+        <div className="col-lg-8"><h3>Wishlists</h3></div>
       <div className="all custom-card card">
       {wishlist.length>0 && wishlist.map((item,i)=>{
        return <div className="item card-body" key={'w'+i}>
@@ -149,7 +149,8 @@ const [coupon,setcoupon]=useState(false);
         )}
       </div>
 
-      <div className="side-total">
+      <div className="side-total col-lg-4">
+        <div className="custom-card">
         <p>Total Amount of</p>
         <hr/>
         {cart.length>0 && cart.map((item,i)=>
@@ -166,7 +167,7 @@ const [coupon,setcoupon]=useState(false);
   <p className="coupon">10% OFF with STYLENOW</p>
   <p className="coupon">15% OFF with NOWORNEVER</p>
   </div>}
-      </div>
+      </div></div>
       </div>
         {/* Do not remove the main div */}
     </>
