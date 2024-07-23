@@ -106,7 +106,7 @@ const [coupon,setcoupon]=useState(false);
 
 
       <div id="wishlists">
-      <h3>Wishlists</h3>
+        <div><h3>Wishlists</h3></div>
       <div className="all">
       {wishlist.length>0 && wishlist.map((item,i)=>{
        return <div className="item custom-card card card-body" key={'w'+i}>
