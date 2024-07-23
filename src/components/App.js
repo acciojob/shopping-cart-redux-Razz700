@@ -90,12 +90,11 @@ const [coupon,setcoupon]=useState(false);
       <h2 className="text-center">Shopping Cart</h2> 
       </div> 
       <div className="all">
-        <div><h3>Wishlists</h3>
+        <div><h3>All Products</h3>
         </div>
-        <div><h3></h3></div>
         <div className="custom-card card">
       {all.length>0 && all.map((item,i)=>{
-       return <div className="item card" key={'a'+i}>
+       return <div className="item card custom-card" key={'a'+i}>
           <img src={item.images[0]} />
           <p>${item.price}</p>
           <h4>{item.title}</h4>
