@@ -91,8 +91,7 @@ const [coupon,setcoupon]=useState(false);
       </div> 
 
       <div className="all">
-        <div className="card"><h3>All Products</h3>
-        <div><h3>Wishlists</h3></div>
+        <div className="card col-lg-8"><h3>All Products</h3>
       {all.length>0 && all.map((item,i)=>{
        return <div className="item card custom-card" key={'a'+i}>
           <img src={item.images[0]} />
@@ -102,6 +101,7 @@ const [coupon,setcoupon]=useState(false);
        </div>
       })}
       </div>
+      <div><h3>Wishlists</h3></div>
         </div>
         {/* <div><h3>Wishlists</h3></div> */}
 
