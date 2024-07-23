@@ -123,7 +123,7 @@ const [coupon,setcoupon]=useState(false);
 
       <div className="cart-total">
       <div id="cart" className="col-lg-8">
-      <h4>Cart ( {cart.length} items)</h4>
+      <h4>Cart ( {cart.length} Items)</h4>
       <hr/>
       {cart.length>0 && cart.map((item,i)=>{
         console.log(cart,'this');
