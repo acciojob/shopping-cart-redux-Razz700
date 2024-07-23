@@ -123,7 +123,7 @@ const [coupon,setcoupon]=useState(false);
 
       <div className="cart-total col-lg-8">
       <div id="cart" className="custom-card">
-      <h5>Cart ( {cart.length} Items)</h5>
+      <h4>Cart ( {cart.length} Items)</h4>
       <hr/>
       {cart.length>0 && cart.map((item,i)=>{
         console.log(cart,'this');
@@ -132,7 +132,7 @@ const [coupon,setcoupon]=useState(false);
         <div>
           <div className="p-lastbtn card-body">
           <div className="details"><p>Price:<br/>${item.price}</p>
-          <p>Product Name:<br/>{item.title}</p></div>
+          <h5>Product Name:<br/>{item.title}</h5></div>
           <div className="last-btn"><button className="btn" onClick={()=>handleincrement('dec',i,item)}>-</button><span>{count[i]}</span><button className="btn" onClick={()=>handleincrement('inc',i,item)}>+</button></div>
           </div>
         <div className="btn1 card-body">
