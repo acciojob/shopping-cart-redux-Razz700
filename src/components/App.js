@@ -84,10 +84,10 @@ count[i]!=1? setcount(count=>{
 }
 const [coupon,setcoupon]=useState(false);
   return (
-    <div className="navbar-expand-lg">
-        <h2 className="text-center">Shopping Cart</h2>
-      <div id="all-products">
-      <h3>All Products</h3>
+    <div>
+        {/* <h2 className="text-center">Shopping Cart</h2> */}
+        <h3>All Products</h3>
+
       <div className="all custom-card card" >
       {all.length>0 && all.map((item,i)=>{
        return <div className="item card" key={'a'+i}>
@@ -98,7 +98,8 @@ const [coupon,setcoupon]=useState(false);
        </div>
       })}
       </div>
-      </div>
+
+
       <div id="wishlists">
       <h3>Wishlists</h3>
       <div className="all">
