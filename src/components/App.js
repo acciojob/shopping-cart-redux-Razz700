@@ -89,6 +89,7 @@ const [coupon,setcoupon]=useState(false);
        <div className="navbar-expand-lg">
         <h2 className="text-center">Shopping Cart</h2>
         </div>
+        <h3></h3>
       <div className="all custom-card card" >
       <h3>All Products</h3>
       {all.length>0 && all.map((item,i)=>{
