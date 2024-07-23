@@ -86,8 +86,8 @@ count[i]!=1? setcount(count=>{
 const [coupon,setcoupon]=useState(false);
   return (
     <div>
-      <h3></h3>
        <div className="navbar-expand-lg">
+       <h3></h3>
         <h2 className="text-center">Shopping Cart</h2>
         </div>
       <div className="all custom-card card" >
