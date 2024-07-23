@@ -17,7 +17,7 @@ const App = () => {
     useEffect(()=>{
       axios.request('https://api.escuelajs.co/api/v1/products').then((data)=>{
         console.log(data);
-        const arrthis=data.data.slice(0,3);
+        const arrthis=data.data.slice(0,1);
         dispatch(setalldata(arrthis));
         }).catch((e)=>{console.log(e);}); 
   },[]);
@@ -85,12 +85,11 @@ count[i]!=1? setcount(count=>{
 }
 const [coupon,setcoupon]=useState(false);
   return (
-    <div id="root">
+    <>
       <div className="navbar-expand-lg">
       <h2 className="text-center">Shopping Cart</h2> 
       </div> 
       <div className="all">
-        <h3></h3>
         <div><h3>All Products</h3>
         </div>
         <div><h3></h3></div>
@@ -168,7 +167,7 @@ const [coupon,setcoupon]=useState(false);
       </div>
       </div>
         {/* Do not remove the main div */}
-    </div>
+    </>
   )
 }
 
