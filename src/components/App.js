@@ -92,6 +92,7 @@ const [coupon,setcoupon]=useState(false);
       <div className="all">
         <div><h3>All Products</h3>
         </div>
+        <div><h3>Wishlists</h3></div>
         <div className="custom-card card">
       {all.length>0 && all.map((item,i)=>{
        return <div className="item card custom-card" key={'a'+i}>
