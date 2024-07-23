@@ -89,9 +89,10 @@ const [coupon,setcoupon]=useState(false);
       <div className="navbar-expand-lg">
       <h2 className="text-center">Shopping Cart</h2> 
       </div> 
-      
+
       <div className="all">
         <div className="card"><h3>All Products</h3>
+        <div><h3>Wishlists</h3></div>
       {all.length>0 && all.map((item,i)=>{
        return <div className="item card custom-card" key={'a'+i}>
           <img src={item.images[0]} />
@@ -107,9 +108,9 @@ const [coupon,setcoupon]=useState(false);
 
       <div id="wishlists">
         <div><h3>Wishlists</h3></div>
-      <div className="all">
+      <div className="all custom-card card">
       {wishlist.length>0 && wishlist.map((item,i)=>{
-       return <div className="item custom-card card card-body" key={'w'+i}>
+       return <div className="item card-body" key={'w'+i}>
           <img src={item.images[0]} />
           <p>${item.price}</p>
           <h4>{item.title}</h4>
