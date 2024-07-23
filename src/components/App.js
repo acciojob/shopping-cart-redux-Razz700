@@ -17,7 +17,7 @@ const App = () => {
     useEffect(()=>{
       axios.request('https://api.escuelajs.co/api/v1/products').then((data)=>{
         console.log(data);
-        const arrthis=data.data.slice(0,1);
+        const arrthis=data.data.slice(0,5);
         dispatch(setalldata(arrthis));
         }).catch((e)=>{console.log(e);}); 
   },[]);
@@ -91,18 +91,19 @@ const [coupon,setcoupon]=useState(false);
       </div> 
       <div className="all">
         <div><h3>All Products</h3>
-        </div>
-        <div><h3>Wishlists</h3></div>
-        <div className="custom-card card">
+        <div className="card">
       {all.length>0 && all.map((item,i)=>{
-       return <div className="item card custom-card" key={'a'+i}>
+       return <div className="item custom-card" key={'a'+i}>
           <img src={item.images[0]} />
           <p>${item.price}</p>
-          <h4>{item.title}</h4>
-          <button className="btn-primary" onClick={()=>handleaddtocart(item)}>Add to Cart</button>
+          <p>{item.title}</p>
+         <h4><button className="btn-primary" onClick={()=>handleaddtocart(item)}>Add to Cart</button></h4>
        </div>
       })}
-      </div></div>
+      </div>
+        </div>
+        {/* <div><h3>Wishlists</h3></div>
+        </div> */}
 
 
       <div id="wishlists">
@@ -120,7 +121,7 @@ const [coupon,setcoupon]=useState(false);
       </div>
 
       <div className="cart-total">
-      <div id="cart">
+      <div id="cart" className="col-lg-8">
       <h3>Cart ({cart.length} items)</h3>
       <hr/>
       {cart.length>0 && cart.map((item,i)=>{
