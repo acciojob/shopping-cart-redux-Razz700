@@ -17,7 +17,8 @@ const App = () => {
     useEffect(()=>{
       axios.request('https://api.escuelajs.co/api/v1/products').then((data)=>{
         console.log(data);
-        dispatch(setalldata(data.data))
+        const arrthis=data.data.slice(0,3);
+        dispatch(setalldata(arrthis));
         }).catch((e)=>{console.log(e);}); 
   },[]);
 const handleaddtocart=(item,check)=>{
@@ -88,9 +89,8 @@ const [coupon,setcoupon]=useState(false);
        <div className="navbar-expand-lg">
         <h2 className="text-center">Shopping Cart</h2>
         </div>
-         <h3>All Products</h3>
-
       <div className="all custom-card card" >
+      <h3>All Products</h3>
       {all.length>0 && all.map((item,i)=>{
        return <div className="item card" key={'a'+i}>
           <img src={item.images[0]} />
