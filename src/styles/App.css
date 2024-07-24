@@ -130,3 +130,7 @@ gap:25px;
 .side-total .itemprice{
     text-align: justify;
 }
+svg{
+    width: 20px;
+    height: 20px;
+}
