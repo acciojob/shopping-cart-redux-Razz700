@@ -150,7 +150,7 @@ const [coupon,setcoupon]=useState(false);
 
       <div className="side-total col-lg-4">
         <div className="custom-card">
-        <h5>Total Amount of</h5>
+        <h5>The Total Amount Of</h5>
         <hr/>
         {cart.length>0 && cart.map((item,i)=>
         { return<div className="itemprice" key={'total'+i}>{i+1}. {item.title} <b>${item.price}</b>
