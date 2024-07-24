@@ -102,11 +102,7 @@ const [coupon,setcoupon]=useState(false);
          </div>
       })}
       </div>
-      <div><h3>Wishlists</h3></div>
-        </div>
-        {/* <div><h3>Wishlists</h3></div> */}
-
-
+      <div><h3>Wishlists</h3>
       <div id="wishlists">
         <div className="col-lg-8"><h3>Wishlists</h3></div>
       <div className="all custom-card card">
@@ -120,6 +116,12 @@ const [coupon,setcoupon]=useState(false);
       })}
       </div>
       </div>
+      </div>
+        </div>
+        {/* <div><h3>Wishlists</h3></div> */}
+
+
+      
 
       <div className="cart-total ">
       <div id="cart" className="col-lg-8">
