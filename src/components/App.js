@@ -14,13 +14,12 @@ const App = () => {
  const wishlist=useSelector((state)=>state.list.list1);
  console.log(wishlist,'list');
  console.log('total',total);
- ////////////////////
- const completetdata=[{"id":632,"title":"Trustworthiness","price":186,"description":"Vitae labore sunt eo","images":["https://static.india.com/wp-content/uploads/2020/05/table-tennis.jpg?impolicy=Medium_Widthonly&w=700"],"creationAt":"2024-07-23T07:13:05.000Z","updatedAt":"2024-07-23T07:13:05.000Z","category":{"id":1,"name":"Clothes","image":"https://i.imgur.com/QkIa5tT.jpeg","creationAt":"2024-07-23T04:38:02.000Z","updatedAt":"2024-07-23T04:38:02.000Z"}},{"id":638,"title":"Quest","price":186,"description":"Vitae labore sunt eo","images":["https://static.india.com/wp-content/uploads/2020/05/table-tennis.jpg?impolicy=Medium_Widthonly&w=700"],"creationAt":"2024-07-23T07:13:06.000Z","updatedAt":"2024-07-23T07:13:06.000Z","category":{"id":4,"name":"Shoes","image":"https://api.escuelajs.co/api/v1/files/4184.jpg","creationAt":"2024-07-23T04:38:02.000Z","updatedAt":"2024-07-23T10:37:20.000Z"}},{"id":640,"title":"Uplift","price":186,"description":"Vitae labore sunt eo","images":["https://static.india.com/wp-content/uploads/2020/05/table-tennis.jpg?impolicy=Medium_Widthonly&w=700"],"creationAt":"2024-07-23T07:13:06.000Z","updatedAt":"2024-07-23T07:13:06.000Z","category":{"id":3,"name":"Furniture","image":"https://i.imgur.com/Qphac99.jpeg","creationAt":"2024-07-23T04:38:02.000Z","updatedAt":"2024-07-23T04:38:02.000Z"}},{"id":641,"title":"Ambit","price":186,"description":"Vitae labore sunt eo","images":["https://static.india.com/wp-content/uploads/2020/05/table-tennis.jpg?impolicy=Medium_Widthonly&w=700"],"creationAt":"2024-07-23T07:13:06.000Z","updatedAt":"2024-07-23T22:31:57.000Z","category":{"id":5,"name":"Miscellaneous","image":"https://i.imgur.com/BG8J0Fj.jpg","creationAt":"2024-07-23T04:38:02.000Z","updatedAt":"2024-07-23T04:38:02.000Z"}},{"id":643,"title":"Quest","price":186,"description":"Vitae labore sunt eo","images":["https://static.india.com/wp-content/uploads/2020/05/table-tennis.jpg?impolicy=Medium_Widthonly&w=700"],"creationAt":"2024-07-23T07:13:06.000Z","updatedAt":"2024-07-23T07:13:06.000Z","category":{"id":3,"name":"Furniture","image":"https://i.imgur.com/Qphac99.jpeg","creationAt":"2024-07-23T04:38:02.000Z","updatedAt":"2024-07-23T04:38:02.000Z"}}];
-    dispatch(setalldata(completetdata.slice(0,4)));
     useEffect(()=>{
+    const completetdata=[{"id":632,"title":"Trustworthiness","price":186,"description":"Vitae labore sunt eo","images":["https://static.india.com/wp-content/uploads/2020/05/table-tennis.jpg?impolicy=Medium_Widthonly&w=700"],"creationAt":"2024-07-23T07:13:05.000Z","updatedAt":"2024-07-23T07:13:05.000Z","category":{"id":1,"name":"Clothes","image":"https://i.imgur.com/QkIa5tT.jpeg","creationAt":"2024-07-23T04:38:02.000Z","updatedAt":"2024-07-23T04:38:02.000Z"}},{"id":638,"title":"Quest","price":186,"description":"Vitae labore sunt eo","images":["https://static.india.com/wp-content/uploads/2020/05/table-tennis.jpg?impolicy=Medium_Widthonly&w=700"],"creationAt":"2024-07-23T07:13:06.000Z","updatedAt":"2024-07-23T07:13:06.000Z","category":{"id":4,"name":"Shoes","image":"https://api.escuelajs.co/api/v1/files/4184.jpg","creationAt":"2024-07-23T04:38:02.000Z","updatedAt":"2024-07-23T10:37:20.000Z"}},{"id":640,"title":"Uplift","price":186,"description":"Vitae labore sunt eo","images":["https://static.india.com/wp-content/uploads/2020/05/table-tennis.jpg?impolicy=Medium_Widthonly&w=700"],"creationAt":"2024-07-23T07:13:06.000Z","updatedAt":"2024-07-23T07:13:06.000Z","category":{"id":3,"name":"Furniture","image":"https://i.imgur.com/Qphac99.jpeg","creationAt":"2024-07-23T04:38:02.000Z","updatedAt":"2024-07-23T04:38:02.000Z"}},{"id":641,"title":"Ambit","price":186,"description":"Vitae labore sunt eo","images":["https://static.india.com/wp-content/uploads/2020/05/table-tennis.jpg?impolicy=Medium_Widthonly&w=700"],"creationAt":"2024-07-23T07:13:06.000Z","updatedAt":"2024-07-23T22:31:57.000Z","category":{"id":5,"name":"Miscellaneous","image":"https://i.imgur.com/BG8J0Fj.jpg","creationAt":"2024-07-23T04:38:02.000Z","updatedAt":"2024-07-23T04:38:02.000Z"}},{"id":643,"title":"Quest","price":186,"description":"Vitae labore sunt eo","images":["https://static.india.com/wp-content/uploads/2020/05/table-tennis.jpg?impolicy=Medium_Widthonly&w=700"],"creationAt":"2024-07-23T07:13:06.000Z","updatedAt":"2024-07-23T07:13:06.000Z","category":{"id":3,"name":"Furniture","image":"https://i.imgur.com/Qphac99.jpeg","creationAt":"2024-07-23T04:38:02.000Z","updatedAt":"2024-07-23T04:38:02.000Z"}}];
+    dispatch(setalldata(completetdata));
       axios.request('https://api.escuelajs.co/api/v1/products').then((data)=>{
         console.log(data);
-        const arrthis=data.data.slice(0,1);
+        const arrthis=data.data.slice(0,5);
         console.log(arrthis,JSON.stringify(arrthis));
         
         }).catch((e)=>{console.log(e);}); 
@@ -99,19 +98,18 @@ const [coupon,setcoupon]=useState(false);
       {all.length>0 && all.map((item,i)=>{
        return <div className="item custom-card card" key={'a'+i}>
           <img src={item.images[0]} />
-          <div className="card-body"> <p>${item.price}</p>
+         <p>${item.price}</p>
           <h4>{item.title}</h4>
           <button className="btn-primary" onClick={()=>handleaddtocart(item)}>Add to Cart</button>
-       </div>
          </div>
       })}
       </div>
       <div><h3>Wishlists</h3>
       <div id="wishlists">
         <div className="col-lg-8"><h3>Wishlists</h3></div>
-      <div className="all custom-card card">
+      <div className="all">
       {wishlist.length>0 && wishlist.map((item,i)=>{
-       return <div className="item card-body" key={'w'+i}>
+       return <div className="item card-body custom-card card" key={'w'+i}>
           <img src={item.images[0]} />
           <p>${item.price}</p>
           <h4>{item.title}</h4>
@@ -124,6 +122,8 @@ const [coupon,setcoupon]=useState(false);
         </div>
         {/* <div><h3>Wishlists</h3></div> */}
 
+
+      
 
       <div className="cart-total ">
       <div id="cart" className="col-lg-8">
