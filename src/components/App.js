@@ -93,7 +93,7 @@ const [coupon,setcoupon]=useState(false);
       <h2 className="text-center">Shopping Cart</h2> 
       </div> 
 
-      <div className="all">
+      <div className="all col-lg-8">
         <div><h3>All Products</h3>
       {all.length>0 && all.map((item,i)=>{
        return <div className="item custom-card card" key={'a'+i}>
@@ -105,7 +105,7 @@ const [coupon,setcoupon]=useState(false);
       })}
       </div>
       <div><h3>Wishlists</h3>
-      <div id="wishlists">
+      <div id="wishlists" className="col-lg-8">
       <div className="all">
       {wishlist.length>0 && wishlist.map((item,i)=>{
        return <div className="item card-body custom-card card" key={'w'+i}>
