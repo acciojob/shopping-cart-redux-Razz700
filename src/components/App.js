@@ -99,9 +99,8 @@ const [coupon,setcoupon]=useState(false);
 return <div className="item custom-card card" key={'a'+i}>
   <img src={item.images[0]} />
   <div className="card-body"> <p>${item.price}</p>
-  <h4>{item.title}</h4>
+  <h4>{item.title}</h4></div>
   <button className="btn-primary" onClick={()=>handleaddtocart(item)}>Add to Cart</button>
-</div>
  </div>
 })}
 </div>
