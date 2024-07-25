@@ -95,7 +95,7 @@ const [coupon,setcoupon]=useState(false);
 
       <div className="all">
 <div className="col-lg-8"><h3>All Products</h3>
-{/* {all.length>0 && all.map((item,i)=>{
+{all.length>0 && all.map((item,i)=>{
 return <div className="item custom-card card" key={'a'+i}>
   <img src={item.images[0]} />
   <div className="card-body"> <p>${item.price}</p>
@@ -104,7 +104,7 @@ return <div className="item custom-card card" key={'a'+i}>
 </div>
  </div>
 })}
-</div> */}
+</div>
 <div><h3>Wishlists</h3>
 {/* <div id="wishlists"> */}
 {/* <div className="col-lg-8"><h3>Wishlists</h3></div> */}
