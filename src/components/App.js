@@ -152,10 +152,11 @@ return<div  className="cart custom-card card" key={'cart'+i}>
 
 
 <div className="side-total col-lg-4">
+  <div className="custom-card card">
 <h5>The Total Amount Of</h5>
 <hr/>
 {cart.length>0 && cart.map((item,i)=>
-{ return<div className="itemprice custom-card card" key={'total'+i}>{i+1}. {item.title} <b>${item.price}</b>
+{ return<div className="itemprice" key={'total'+i}>{i+1}. {item.title} <b>${item.price}</b>
 </div>})}
 <hr/>
 {cart.length>0 && <div><p>Total: $$<b>{price}</b></p>
@@ -168,7 +169,7 @@ return<div  className="cart custom-card card" key={'cart'+i}>
 <p className="coupon">10% OFF with STYLENOW</p>
 <p className="coupon">15% OFF with NOWORNEVER</p>
 </div>}
-</div>
+</div></div>
         {/* Do not remove the main div */}
     </>
   )
