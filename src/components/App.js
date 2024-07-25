@@ -99,9 +99,9 @@ const [coupon,setcoupon]=useState(false);
 return <div className="item custom-card card" key={'a'+i}>
   <img src={item.images[0]} />
   <div className="card-body"> <p>${item.price}</p>
-  <h4>{item.title}</h4></div>
-  <button className="btn-primary" onClick={()=>handleaddtocart(item)}>Add to Cart</button>
- </div>
+  <h4>{item.title}</h4>
+  <button className="btn btn-primary" onClick={()=>handleaddtocart(item)}>Add to Cart</button>
+ </div></div>
 })}
 </div>
 <div><h3>Wishlists</h3>
@@ -122,8 +122,8 @@ return <div className="item custom-card card" key={'w'+i}>
 {/* <div><h3>Wishlists</h3></div> */}
 
 
-<div className="cart-total ">
-<div id="cart" className="col-lg-8">
+
+<div id="cart" className="cart-total col-lg-8">
 <h4>Cart ( {cart.length} Items)</h4>
 <hr/>
 {cart.length>0 && cart.map((item,i)=>{
@@ -150,15 +150,14 @@ return<div  className="cart custom-card card" key={'cart'+i}>
 )}
 </div>
 
+
 <div className="side-total col-lg-4">
-<div className="custom-card card">
 <h5>The Total Amount Of</h5>
 <hr/>
 {cart.length>0 && cart.map((item,i)=>
-{ return<div className="itemprice" key={'total'+i}>{i+1}. {item.title} <b>${item.price}</b>
+{ return<div className="itemprice custom-card card" key={'total'+i}>{i+1}. {item.title} <b>${item.price}</b>
 </div>})}
 <hr/>
-
 {cart.length>0 && <div><p>Total: $$<b>{price}</b></p>
 <button>Go to Checkout</button></div>}
 <div className="coupon" onClick={()=>{setcoupon(coupon=>coupon?false:true)}}>Add a dicount code(optional)<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
@@ -169,7 +168,6 @@ return<div  className="cart custom-card card" key={'cart'+i}>
 <p className="coupon">10% OFF with STYLENOW</p>
 <p className="coupon">15% OFF with NOWORNEVER</p>
 </div>}
-</div></div>
 </div>
         {/* Do not remove the main div */}
     </>
